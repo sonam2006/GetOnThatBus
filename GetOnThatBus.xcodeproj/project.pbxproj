@@ -24,6 +24,7 @@
 		2765AD4E188F05DC00843358 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765AD4D188F05DC00843358 /* MapKit.framework */; };
 		2765AD51188F1DEF00843358 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765AD50188F1DEF00843358 /* DetailViewController.m */; };
 		2765AD54188F2CA200843358 /* BusPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765AD53188F2CA200843358 /* BusPointAnnotation.m */; };
+		2765AD56188F46CA00843358 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765AD55188F46CA00843358 /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		2765AD50188F1DEF00843358 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		2765AD52188F2CA200843358 /* BusPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusPointAnnotation.h; sourceTree = "<group>"; };
 		2765AD53188F2CA200843358 /* BusPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusPointAnnotation.m; sourceTree = "<group>"; };
+		2765AD55188F46CA00843358 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2765AD56188F46CA00843358 /* AddressBookUI.framework in Frameworks */,
 				2765AD19188F053B00843358 /* CoreGraphics.framework in Frameworks */,
 				2765AD4E188F05DC00843358 /* MapKit.framework in Frameworks */,
 				2765AD1B188F053B00843358 /* UIKit.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		2765AD15188F053B00843358 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2765AD55188F46CA00843358 /* AddressBookUI.framework */,
 				2765AD4D188F05DC00843358 /* MapKit.framework */,
 				2765AD16188F053B00843358 /* Foundation.framework */,
 				2765AD18188F053B00843358 /* CoreGraphics.framework */,

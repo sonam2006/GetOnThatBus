@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "BusPointAnnotation.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 @interface DetailViewController ()
 {
@@ -49,17 +50,18 @@
     longitude = longitudeString.doubleValue;
     
     busStopCoordinates = CLLocationCoordinate2DMake(latitude, longitude);
-
+    CLLocation * newCoordinates = [[CLLocation alloc]initWithLatitude:latitude longitude:longitude];
     
     CLGeocoder *geoCoder = [CLGeocoder new];
-    [geoCoder reverseGeocodeLocation:busStopCoordinates completionHandler:
-     if (error) { NSLog(@"Geocode failed with error, %@", error);
-         return;} else {
-             
-             addressLabel.text = placemark;
-             
-         }]
-    
+    [geoCoder reverseGeocodeLocation:newCoordinates completionHandler:^(NSArray *placemarks, NSError *error)
+        {
+                   for (CLPlacemark* placemark in placemarks)
+            {
+                addressLabel.text = ABCreateStringWithAddressDictionary (placemark.addressDictionary, NO);
+                
+            }
+        }
+    ];
     
 }
 

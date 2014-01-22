@@ -94,27 +94,31 @@
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     
-    DetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SonamIsTheBest"];
+    [self performSegueWithIdentifier:@"DetailSegue" sender:view];
     
-    BusPointAnnotation *temp = view.annotation;
-    viewController.busStop = temp.busStop;
     
-    [self.navigationController pushViewController:viewController animated:YES];
+    
+    //DetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SonamIsTheBest"];
+    
+
+    
+    //[self.navigationController pushViewController:viewController animated:YES];
     
     
 }
 
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"SonamsSpecialSegue"])
-//    {
-//        DetailViewController *vc = segue.destinationViewController;
-//        
-//        
-//        
-//    }
-//    
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MKAnnotationView *)sender
+{
+    if ([segue.identifier isEqualToString:@"DetailSegue"])
+    {
+        DetailViewController *vc = segue.destinationViewController;
+        
+        BusPointAnnotation *temp = sender.annotation;
+        vc.busStop = temp.busStop;
+
+    }
+}
 
 
 

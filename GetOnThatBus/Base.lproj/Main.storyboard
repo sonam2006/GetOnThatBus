@@ -29,6 +29,7 @@
                     <navigationItem key="navigationItem" id="605-fX-UeO"/>
                     <connections>
                         <outlet property="mapView" destination="dFj-J4-8FF" id="Sm1-fi-EnW"/>
+                        <segue destination="AVJ-s1-bLP" kind="push" identifier="DetailSegue" id="axh-lZ-eOL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
